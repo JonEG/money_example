@@ -20,7 +20,7 @@ it to the list.
 + <s>5 CHF * 2 = 10 CHF</s>
 + Dollar/Franc duplication
 + <s>Common equals</s>
-+ Common times
++ <s>Common times</s>
 + <s>Compare Francs with Dollars</s>
 + <s>Currency?</s>
 + Delete testFrancMultiplication?
