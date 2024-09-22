@@ -1,4 +1,5 @@
-import 'package:money_example/money_example.dart';
+import 'package:money_example/Dollar.dart';
+import 'package:money_example/Franc.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -17,7 +18,7 @@ void main() {
   });
 
   test('test Franc multiplication', () {
-    Fran five = Franc(5);
+    Franc five = Franc(5);
 
     expect(five.times(2), Franc(10));
     expect(five.times(3), Franc(15));
