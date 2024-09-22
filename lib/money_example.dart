@@ -1,15 +1,17 @@
 class Dollar {
-  int amount;
+  final int _amount;
 
-  Dollar(this.amount);
+  //int get amount => _amount;
+
+  Dollar(this._amount);
 
   Dollar times(int multiplier) {
-    return Dollar(amount * multiplier);
+    return Dollar(_amount * multiplier);
   }
 
   @override
   bool operator ==(Object other) {
     Dollar dollar = other as Dollar;
-    return amount == dollar.amount;
+    return _amount == dollar._amount;
   }
 }
