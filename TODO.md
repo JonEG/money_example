@@ -10,8 +10,10 @@ it to the list.
 
 + $5 + 10 CHF = $10 if rate is 2:1
 + <s>$5 * 2 = $10</s>
-+ Make "amount" private
++ __Make "amount" private__
 + <s>Dollar side effects?</s>
 + Money rounding?
 +<s>equals()</s>
 + hashCode()
++ Equal null
++ Equal object
