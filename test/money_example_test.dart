@@ -15,4 +15,11 @@ void main() {
     bool assertFalse = Dollar(5) == Dollar(6);
     expect(assertFalse, false);
   });
+
+  test('test Franc multiplication', () {
+    Fran five = Franc(5);
+
+    expect(five.times(2), Franc(10));
+    expect(five.times(3), Franc(15));
+  });
 }
