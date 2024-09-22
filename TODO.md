@@ -13,8 +13,11 @@ it to the list.
 + <s>Make "amount" private</s>
 + <s>Dollar side effects?</s>
 + Money rounding?
-+<s>equals()</s>
++ <s>equals()</s>
 + hashCode()
 + Equal null
 + Equal object
-+ 5 CHF * 2 = 10 CHF
++ <s>5 CHF * 2 = 10 CHF</s>
++ Dollar/Franc duplication
++ <s>Common equals__</s>
++ Common times

@@ -4,10 +4,13 @@ import 'package:test/test.dart';
 
 void main() {
   test('test multiplication', () {
-    Dollar five = Dollar(5);
+    Dollar fiveDollars = Dollar(5);
+    Franc fiveFrancs = Franc(5);
 
-    expect(five.times(2), Dollar(10));
-    expect(five.times(3), Dollar(15));
+    expect(fiveDollars.times(2), Dollar(10));
+    expect(fiveDollars.times(3), Dollar(15));
+    expect(fiveFrancs.times(2), Franc(10));
+    expect(fiveFrancs.times(3), Franc(15));
   });
 
   test('test equality', () {
