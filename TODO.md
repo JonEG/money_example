@@ -8,8 +8,8 @@ it to the list.
 
 ## Todo List
 
-+ We need to be able to add amounts in two different currencies and convert the result given a
-set of exchange rates.
-
-+ <s>We need to be able to multiply an amount (price per share) by a number (number of shares)
-and receive an amount</s>.
++ $5 + 10 CHF = $10 if rate is 2:1
++ <s>$5 * 2 = $10</s>
++ Make "amount" private
++ Dollar side effects?
++ Money rounding?
