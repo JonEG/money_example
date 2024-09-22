@@ -4,10 +4,9 @@ import 'package:test/test.dart';
 void main() {
   test('test multiplication', () {
     Dollar five = Dollar(5);
-    Dollar product = five.times(2);
-    expect(product.amount, 10);
-    product = five.times(3);
-    expect(product.amount, 15);
+
+    expect(five.times(2), Dollar(10));
+    expect(five.times(3), Dollar(15));
   });
 
   test('test equality', () {
