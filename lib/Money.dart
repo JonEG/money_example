@@ -1,6 +1,3 @@
-import 'package:money_example/Dollar.dart';
-import 'package:money_example/Franc.dart';
-
 class Money {
   final int _amount;
   final String _currency;
@@ -15,17 +12,16 @@ class Money {
     return _amount == money._amount && _currency == other._currency;
   }
 
-  @override
   Money times(int multiplier) {
     return Money(_amount * multiplier, _currency);
   }
 
   static Money dollar(int amount) {
-    return Dollar(amount, 'USD');
+    return Money(amount, 'USD');
   }
 
   static Money franc(int amount) {
-    return Franc(amount, 'CHF');
+    return Money(amount, 'CHF');
   }
 
   @override
