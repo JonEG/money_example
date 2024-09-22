@@ -1,5 +1,3 @@
-import 'package:money_example/Dollar.dart';
-import 'package:money_example/Franc.dart';
 import 'package:money_example/Money.dart';
 import 'package:test/test.dart';
 
@@ -14,15 +12,20 @@ void main() {
   test('test equality', () {
     expect(Money.dollar(5) == Money.dollar(5), true);
     expect(Money.dollar(5) == Money.dollar(6), false);
-    expect(Franc(5) == Franc(5), true);
-    expect(Franc(5) == Franc(6), false);
-    expect(Money.dollar(5) == Franc(5), false);
+    expect(Money.franc(5) == Money.franc(5), true);
+    expect(Money.franc(5) == Money.franc(6), false);
+    expect(Money.dollar(5) == Money.franc(5), false);
   });
 
   test('test Franc multiplication', () {
-    Franc five = Franc(5);
+    Money five = Money.franc(5);
 
-    expect(five.times(2), Franc(10));
-    expect(five.times(3), Franc(15));
+    expect(five.times(2), Money.franc(10));
+    expect(five.times(3), Money.franc(15));
+  });
+
+  test('test currency', () {
+    expect(Money.dollar(1).currency, 'USD');
+    expect(Money.franc(1).currency, 'CHF');
   });
 }

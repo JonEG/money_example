@@ -1,9 +1,11 @@
 import 'package:money_example/Dollar.dart';
+import 'package:money_example/Franc.dart';
 
 abstract class Money {
   final int _amount;
+  final String currency;
 
-  Money(this._amount);
+  Money(this._amount, this.currency);
 
   @override
   bool operator ==(Object other) {
@@ -13,7 +15,11 @@ abstract class Money {
 
   Money times(int multiplier);
 
-  static Dollar dollar(int amount) {
-    return Dollar(amount);
+  static Money dollar(int amount) {
+    return Dollar(amount, 'USD');
+  }
+
+  static Money franc(int amount) {
+    return Franc(amount, 'CHF');
   }
 }

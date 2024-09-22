@@ -18,9 +18,9 @@ it to the list.
 + Equal null
 + Equal object
 + <s>5 CHF * 2 = 10 CHF</s>
-+ __Dollar/Franc duplication__
++ Dollar/Franc duplication
 + <s>Common equals</s>
 + Common times
 + <s>Compare Francs with Dollars</s>
-+ Currency?
++ <s>Currency?</s>
 + Delete testFrancMultiplication?
