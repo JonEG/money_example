@@ -9,4 +9,8 @@ void main() {
     product = five.times(3);
     expect(product.amount, 15);
   });
+
+  test('test equality', () {
+    expect(Dollar(5), Dollar(5));
+  });
 }
