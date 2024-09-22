@@ -4,7 +4,7 @@ class Franc extends Money {
   final int _amount;
   Franc(this._amount) : super(_amount);
 
-  Franc times(int multiplier) {
+  Money times(int multiplier) {
     return Franc(_amount * multiplier);
   }
 }
