@@ -6,6 +6,6 @@ class Money {
   @override
   bool operator ==(Object other) {
     Money money = other as Money;
-    return _amount == money._amount;
+    return _amount == money._amount && runtimeType == other.runtimeType;
   }
 }

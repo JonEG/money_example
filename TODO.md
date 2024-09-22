@@ -21,3 +21,5 @@ it to the list.
 + Dollar/Franc duplication
 + <s>Common equals__</s>
 + Common times
++ <s>Compare Francs with Dollars__</s>
++ Currency?

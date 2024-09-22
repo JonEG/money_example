@@ -14,10 +14,9 @@ void main() {
   });
 
   test('test equality', () {
-    bool assertTrue = Dollar(5) == Dollar(5);
-    expect(assertTrue, true);
-    bool assertFalse = Dollar(5) == Dollar(6);
-    expect(assertFalse, false);
+    expect(Dollar(5) == Dollar(5), true);
+    expect(Dollar(5) == Dollar(6), false);
+    expect(Dollar(5) == Franc(5), false);
   });
 
   test('test Franc multiplication', () {
