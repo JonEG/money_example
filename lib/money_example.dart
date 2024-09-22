@@ -8,7 +8,8 @@ class Dollar {
   }
 
   @override
-  bool operator ==(Object object) {
-    return true;
+  bool operator ==(Object other) {
+    Dollar dollar = other as Dollar;
+    return amount == dollar.amount;
   }
 }

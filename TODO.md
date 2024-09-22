@@ -13,5 +13,5 @@ it to the list.
 + Make "amount" private
 + <s>Dollar side effects?</s>
 + Money rounding?
-+ __equals()__
++<s>equals()</s>
 + hashCode()
