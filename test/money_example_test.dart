@@ -1,4 +1,7 @@
-import 'package:money_example/Money.dart';
+import 'package:money_example/bank.dart';
+import 'package:money_example/expression.dart';
+import 'package:money_example/money.dart';
+import 'package:money_example/sum.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -25,5 +28,34 @@ void main() {
   test('test currency', () {
     expect(Money.dollar(1).currency, 'USD');
     expect(Money.franc(1).currency, 'CHF');
+  });
+
+  test('test simple addition', () {
+    Money five = Money.dollar(5);
+    Expression sum = five.plus(five);
+    Bank bank = Bank();
+    Money reduced = bank.reduce(sum, 'USD');
+    expect(reduced, Money.dollar(10));
+  });
+
+  test('test plus returns Sum', () {
+    Money five = Money.dollar(5);
+    Expression result = five.plus(five);
+    Sum sum = result as Sum;
+    expect(five, sum.augend);
+    expect(five, sum.addend);
+  });
+
+  test('test reduce sum', () {
+    Expression sum = Sum(Money.dollar(3), Money.dollar(4));
+    Bank bank = Bank();
+    Money result = bank.reduce(sum, 'USD');
+    expect(result, Money.dollar(7));
+  });
+
+  test('test reduce money', () {
+    Bank bank = Bank();
+    Money result = bank.reduce(Money.dollar(1), 'USD');
+    expect(result, Money.dollar(1));
   });
 }

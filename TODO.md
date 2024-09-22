@@ -9,14 +9,18 @@ it to the list.
 ## Todo List
 
 + $5 + 10 CHF = $10 if rate is 2:1
-+ <s>$5 * 2 = $10</s>
-+ <s>Make "amount" private</s>
-+ <s>Dollar side effects?</s>
++ Return Money from $5 + $5
++ Bank.reduce(Money)
++ __Reduce Money with conversion__
 + Money rounding?
-+ <s>equals()</s>
 + hashCode()
 + Equal null
 + Equal object
++ <s>Reduce(Bank, String)</s>
++ <s>$5 * 2 = $10</s>
++ <s>Make "amount" private</s>
++ <s>Dollar side effects?</s>
++ <s>equals()</s>
 + <s>5 CHF * 2 = 10 CHF</s>
 + <s>Dollar/Franc duplication</s>
 + <s>Common equals</s>
