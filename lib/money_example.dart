@@ -1,7 +1,9 @@
 class Dollar {
-  int amount = 0;
+  int amount;
 
-  Dollar(int amount);
+  Dollar(this.amount);
 
-  void times(int multiplier) {}
+  void times(int multiplier) {
+    amount *= multiplier;
+  }
 }
