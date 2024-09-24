@@ -58,4 +58,16 @@ void main() {
     Money result = bank.reduce(Money.dollar(1), 'USD');
     expect(result, Money.dollar(1));
   });
+
+  test('test reduce money different currency', () {
+    Bank bank = Bank();
+    bank.addRate("CHF", "USD", 2);
+    Money result = bank.reduce(Money.franc(4), "USD");
+    expect(result, Money.dollar(2));
+  });
+
+  test('test identity rate', () {
+    Bank bank = Bank();
+    expect(bank.rate("USD", "USD"), 1.0);
+  });
 }

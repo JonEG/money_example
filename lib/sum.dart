@@ -1,3 +1,4 @@
+import 'package:money_example/bank.dart';
 import 'package:money_example/expression.dart';
 import 'package:money_example/money.dart';
 
@@ -8,7 +9,7 @@ class Sum implements Expression {
   Money addend;
 
   @override
-  Money reduce(String to) {
+  Money reduce(Bank bank, String to) {
     int amount = augend.amount + addend.amount;
     return Money(amount, to);
   }

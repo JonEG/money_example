@@ -1,3 +1,4 @@
+import 'package:money_example/bank.dart';
 import 'package:money_example/expression.dart';
 import 'package:money_example/sum.dart';
 
@@ -25,8 +26,9 @@ class Money implements Expression {
   }
 
   @override
-  Money reduce(String to) {
-    return this;
+  Money reduce(Bank bank, String to) {
+    int rate = bank.rate(currency, to) ?? -1;
+    return Money((amount / rate).round(), to);
   }
 
   static Money dollar(int amount) {
