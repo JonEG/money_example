@@ -89,4 +89,13 @@ void main() {
     Money result = bank.reduce(sum, "USD");
     expect(result, Money.dollar(15));
   });
+  test('test sum times', () {
+    Expression fiveBucks = Money.dollar(5);
+    Expression tenFrancs = Money.franc(10);
+    Bank bank = Bank();
+    bank.addRate("CHF", "USD", 2);
+    Expression sum = Sum(fiveBucks, tenFrancs).times(2);
+    Money result = bank.reduce(sum, "USD");
+    expect(result, Money.dollar(20));
+  });
 }
