@@ -70,4 +70,23 @@ void main() {
     Bank bank = Bank();
     expect(bank.rate("USD", "USD"), 1.0);
   });
+
+  test('test mixed addition', () {
+    Expression fiveBucks = Money.dollar(5);
+    Expression tenFrancs = Money.franc(10);
+    Bank bank = Bank();
+    bank.addRate("CHF", "USD", 2);
+    Money result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
+    expect(result, Money.dollar(10));
+  });
+
+  test('test sum plus money', () {
+    Expression fiveBucks = Money.dollar(5);
+    Expression tenFrancs = Money.franc(10);
+    Bank bank = Bank();
+    bank.addRate("CHF", "USD", 2);
+    Expression sum = Sum(fiveBucks, tenFrancs).plus(fiveBucks);
+    Money result = bank.reduce(sum, "USD");
+    expect(result, Money.dollar(15));
+  });
 }

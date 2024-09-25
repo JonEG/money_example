@@ -17,11 +17,12 @@ class Money implements Expression {
     return _amount == money._amount && _currency == other._currency;
   }
 
-  Money times(int multiplier) {
+  Expression times(int multiplier) {
     return Money(_amount * multiplier, _currency);
   }
 
-  Expression plus(Money addend) {
+  @override
+  Expression plus(Expression addend) {
     return Sum(this, addend);
   }
 
